@@ -1,4 +1,4 @@
-let myWeapon;
+let myWeaponChoice;
 let enemyWeapon = "rock";
 const weaponlist = ["rock", "paper", "scissor"];
 
@@ -7,6 +7,9 @@ let timesLost = 0;
 let winStreak = 0;
 
 function compareWeapons(myWeapon, enemyWeapon){
+    myWeaponChoice = myWeapon;
+
+    console.log(myWeapon);
     console.log(enemyWeapon);
     console.log(timesWon);
     console.log(timesLost);
@@ -19,34 +22,32 @@ function compareWeapons(myWeapon, enemyWeapon){
 
     else if (myWeapon == "rock" && enemyWeapon == "scissor"){
         //document.getElementById("winNumb").textContent = "you win.";
-        timesWon++
+        win(myWeapon);
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "rock"){
         //document.getElementById("winNumb").textContent = "you win.";
-        document.getElementById("enemycard").style.background = "red";
-        console.log("change to red")
-        timesWon++
+        win(myWeapon);
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "paper"){
-       // document.getElementById("winNumb").textContent = "you win.";
-        timesWon++
+        // document.getElementById("winNumb").textContent = "you win.";
+        win(myWeapon);
     }
 
     else if (myWeapon == "rock" && enemyWeapon == "paper"){
-       // document.getElementById("winNumb").textContent = "you lose.";
-        timesLost++
+        // document.getElementById("winNumb").textContent = "you lose.";
+        lose();
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "scissor"){
         //document.getElementById("winNumb").textContent = "you lose.";
-        timesLost++
+        lose();
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "rock"){
         //document.getElementById("winNumb").textContent = "you lose.";
-        timesLost++
+        lose();
     }
 
 /*
@@ -78,8 +79,14 @@ function checkHighscore(){
 
 function win(){
     document.getElementById("enemycard").style.background = "red";
+    document.getElementById(myWeaponChoice).style.background = "green";
+
+    timesWon++
 }
 
 function lose(){
-    
+    document.getElementById("enemycard").style.background = "green";
+    document.getElementById(myWeaponChoice).style.background = "red";
+
+    timesLost++
 }
