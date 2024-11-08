@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a920b589f2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Rock, paper, scissor</title>
@@ -11,17 +14,17 @@
 <body>
     <div class="gameboard">
         <div class="enemycardcontainer">
-            <div class="actioncard" id="enemycard"><i id="enemyIcon" class="fa-solid fa-question"></i></div>
+            <div class="actioncard cardcolor" id="enemycard"><i id="enemyIcon" class="fa-solid fa-question"></i></div>
         </div>
         <div class="textcontainer">
             <div class="text"><p id="winText">Times won: 0</p></div>
-            <div class="text"><p id="resultText"></p></div>
+            <div class="text"><p id="resultText">CHOOSE YOUR HAND</p></div>
             <div class="text"><p id="loseText">Times lost: 0</p></div>
         </div>
         <div class="mycardcontainer">
-            <div class="actioncard mycard" id="rock" onclick="compareWeapons('rock', getEnemyWeapon())"><i class="fa-regular fa-hand-back-fist"></i></div>
-            <div class="actioncard mycard" id="paper" onclick="compareWeapons('paper', getEnemyWeapon())"><i class="fa-regular fa-hand"></i></div>
-            <div class="actioncard mycard" id="scissor" onclick="compareWeapons('scissor', getEnemyWeapon())"><i class="fa-regular fa-hand-scissors"></i></div>  
+            <div class="actioncard mycard cardcolor" id="ROCK" onclick="compareWeapons('ROCK', getEnemyWeapon())"><i class="fa-regular fa-hand-back-fist"></i></div>
+            <div class="actioncard mycard cardcolor" id="PAPER" onclick="compareWeapons('PAPER', getEnemyWeapon())"><i class="fa-regular fa-hand"></i></div>
+            <div class="actioncard mycard cardcolor" id="SCISSOR" onclick="compareWeapons('SCISSOR', getEnemyWeapon())"><i class="fa-regular fa-hand-scissors"></i></div>  
         </div>
     </div>    
     <script src="index.js"></script>
