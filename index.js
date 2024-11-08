@@ -1,5 +1,5 @@
 let myWeaponChoice;
-let enemyWeapon = "rock";
+let enemyWeaponChoice;
 const weaponlist = ["rock", "paper", "scissor"];
 
 let timesWon = 0;
@@ -8,6 +8,17 @@ let winStreak = 0;
 
 function compareWeapons(myWeapon, enemyWeapon){
     myWeaponChoice = myWeapon;
+    enemyWeaponChoice = enemyWeapon
+
+    switch (enemyWeaponChoice){
+        case "rock": document.getElementById("enemyIcon").className = "fa-regular fa-hand-back-fist"; 
+            break;
+        case "paper": document.getElementById("enemyIcon").className = "fa-regular fa-hand"; 
+            break;
+        case "scissor": document.getElementById("enemyIcon").className = "fa-regular fa-hand-scissors"; 
+            break;
+        default: document.getElementById("enemyIcon").className = "fa-solid fa-question"; ;
+    }
 
     console.log(myWeapon);
     console.log(enemyWeapon);
@@ -43,23 +54,6 @@ function compareWeapons(myWeapon, enemyWeapon){
     else if (myWeapon == "scissor" && enemyWeapon == "rock"){
         lose();
     }
-
-/*
-    switch (myWeapon){
-        case myWeapon == enemyWeapon:
-            console.log("its a tie.")
-            break;
-        case myWeapon == "rock" && enemyWeapon == "scissor":
-        case myWeapon == "paper" && enemyWeapon == "rock":
-        case myWeapon == "scissor" && enemyWeapon == "paper":
-            console.log("you win");
-            break;
-        case myWeapon == "rock" && enemyWeapon == "paper":
-        case myWeapon == "paper" && enemyWeapon == "scissor":
-        case myWeapon == "scissor" && enemyWeapon == "rock":
-            console.log("you lose");
-            break;
-}*/
 }
 
 function getEnemyWeapon(){
@@ -75,7 +69,7 @@ function win(){
     document.getElementById("enemycard").style.background = "red";
     document.getElementById(myWeaponChoice).style.background = "green";
     timesWon++
-    document.getElementById("resultText").textContent = `${myWeaponChoice} beats ${enemyWeapon}`;
+    document.getElementById("resultText").textContent = `${myWeaponChoice} beats ${enemyWeaponChoice}`;
     document.getElementById("winText").textContent = `Times won: ${timesWon}`;
 }
 
@@ -83,6 +77,6 @@ function lose(){
     document.getElementById("enemycard").style.background = "green";
     document.getElementById(myWeaponChoice).style.background = "red";
     timesLost++
-    document.getElementById("resultText").textContent = `${enemyWeapon} beats ${myWeaponChoice}`;
+    document.getElementById("resultText").textContent = `${enemyWeaponChoice} beats ${myWeaponChoice}`;
     document.getElementById("loseText").textContent = `Times lost: ${timesLost}`;
 }
