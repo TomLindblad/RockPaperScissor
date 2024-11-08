@@ -14,36 +14,38 @@ function compareWeapons(myWeapon, enemyWeapon){
     console.log(winStreak);
 
     if(myWeapon == enemyWeapon){
-        document.getElementById("winNumb").textContent = "its a tie.";
+        //document.getElementById("winNumb").textContent = "its a tie.";
     }
 
     else if (myWeapon == "rock" && enemyWeapon == "scissor"){
-        document.getElementById("winNumb").textContent = "you win.";
+        //document.getElementById("winNumb").textContent = "you win.";
         timesWon++
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "rock"){
-        document.getElementById("winNumb").textContent = "you win.";
+        //document.getElementById("winNumb").textContent = "you win.";
+        document.getElementById("enemycard").style.background = "red";
+        console.log("change to red")
         timesWon++
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "paper"){
-        document.getElementById("winNumb").textContent = "you win.";
+       // document.getElementById("winNumb").textContent = "you win.";
         timesWon++
     }
 
     else if (myWeapon == "rock" && enemyWeapon == "paper"){
-        document.getElementById("winNumb").textContent = "you lose.";
+       // document.getElementById("winNumb").textContent = "you lose.";
         timesLost++
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "scissor"){
-        document.getElementById("winNumb").textContent = "you lose.";
+        //document.getElementById("winNumb").textContent = "you lose.";
         timesLost++
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "rock"){
-        document.getElementById("winNumb").textContent = "you lose.";
+        //document.getElementById("winNumb").textContent = "you lose.";
         timesLost++
     }
 
@@ -72,4 +74,12 @@ function getEnemyWeapon(){
 
 function checkHighscore(){
     timesWon > winStreak ? winStreak = timesWon : winStreak = winStreak;
+}
+
+function win(){
+    document.getElementById("enemycard").style.background = "red";
+}
+
+function lose(){
+    
 }

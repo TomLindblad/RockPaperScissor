@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a920b589f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Rock, paper, scissor</title>
 </head>
 <body>
     <div class="gameboard">
-        <div class="cardcontainer">
-            <div class="actioncard rock" onclick="compareWeapons('rock', getEnemyWeapon())"><i class="fa-regular fa-hand-back-fist"></i></div>
-            <div class="actioncard paper" onclick="compareWeapons('paper', getEnemyWeapon())"><i class="fa-regular fa-hand"></i></div>
-            <div class="actioncard scissor" onclick="compareWeapons('scissor', getEnemyWeapon())"><i class="fa-regular fa-hand-scissors"></i></div>  
+        <div class="enemycardcontainer">
+            <div class="actioncard" id="enemycard"><i class="fa-solid fa-question"></i></div>
         </div>
-        <h2 id="winNumb">text text text</h2>
+        <div class="mycardcontainer">
+            <div class="actioncard mycard" id="rock" onclick="compareWeapons('rock', getEnemyWeapon())"><i class="fa-regular fa-hand-back-fist"></i></div>
+            <div class="actioncard mycard" id="paper" onclick="compareWeapons('paper', getEnemyWeapon())"><i class="fa-regular fa-hand"></i></div>
+            <div class="actioncard mycard" id="scissor" onclick="compareWeapons('scissor', getEnemyWeapon())"><i class="fa-regular fa-hand-scissors"></i></div>  
+        </div>
     </div>    
     <script src="index.js"></script>
 </body>
