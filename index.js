@@ -17,36 +17,30 @@ function compareWeapons(myWeapon, enemyWeapon){
     console.log(winStreak);
 
     if(myWeapon == enemyWeapon){
-        //document.getElementById("winNumb").textContent = "its a tie.";
+        document.getElementById("resultText").textContent = `It's a tie!`;
     }
 
     else if (myWeapon == "rock" && enemyWeapon == "scissor"){
-        //document.getElementById("winNumb").textContent = "you win.";
-        win(myWeapon);
+        win();
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "rock"){
-        //document.getElementById("winNumb").textContent = "you win.";
-        win(myWeapon);
+        win();
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "paper"){
-        // document.getElementById("winNumb").textContent = "you win.";
-        win(myWeapon);
+        win();
     }
 
     else if (myWeapon == "rock" && enemyWeapon == "paper"){
-        // document.getElementById("winNumb").textContent = "you lose.";
         lose();
     }
 
     else if (myWeapon == "paper" && enemyWeapon == "scissor"){
-        //document.getElementById("winNumb").textContent = "you lose.";
         lose();
     }
 
     else if (myWeapon == "scissor" && enemyWeapon == "rock"){
-        //document.getElementById("winNumb").textContent = "you lose.";
         lose();
     }
 
@@ -80,13 +74,15 @@ function checkHighscore(){
 function win(){
     document.getElementById("enemycard").style.background = "red";
     document.getElementById(myWeaponChoice).style.background = "green";
-
     timesWon++
+    document.getElementById("resultText").textContent = `${myWeaponChoice} beats ${enemyWeapon}`;
+    document.getElementById("winText").textContent = `Times won: ${timesWon}`;
 }
 
 function lose(){
     document.getElementById("enemycard").style.background = "green";
     document.getElementById(myWeaponChoice).style.background = "red";
-
     timesLost++
+    document.getElementById("resultText").textContent = `${enemyWeapon} beats ${myWeaponChoice}`;
+    document.getElementById("loseText").textContent = `Times lost: ${timesLost}`;
 }

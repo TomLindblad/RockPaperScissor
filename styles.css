@@ -7,6 +7,16 @@ body{
     background-image: radial-gradient( rgb(201, 219, 152),rgb(1, 44, 1) )
 }
 
+p{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.text{
+    width: 33.33%;
+}
+
 .gameboard{
     max-width:900px;
     width: 100%;
