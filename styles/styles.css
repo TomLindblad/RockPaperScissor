@@ -39,7 +39,7 @@ p{
 
 #enemycard:hover{
     animation: shakeshake;
-    animation-duration: 0.9s;
+    animation-duration: 0.4s;
     animation-iteration-count: infinite;
     cursor: not-allowed;
 }
@@ -123,17 +123,15 @@ p{
 }
 
 @keyframes shakeshake{
-    0% {transform: rotateZ(-5deg);}
+    0% {transform: rotateZ(0deg);}
 
-    20% {transform: rotateZ(5deg);}
+    25% {transform: rotateZ(5deg);}
 
-    40% {transform: rotateZ(-5deg);}
+    50% {transform: rotateZ(0deg);}
 
-    60% {transform: rotateZ(5deg);}
+    75% {transform: rotateZ(-5deg);}
 
-    80% {transform: rotateZ(-5deg);}
-
-    100% {transform: rotateZ(5deg);}
+    100% {transform: rotateZ(0deg);}
 }
 
 @media only screen and (max-width: 420px) {

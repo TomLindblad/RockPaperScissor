@@ -17,7 +17,7 @@ function compareWeapons(myWeapon, enemyWeapon){
             break;
         case "SCISSOR": document.getElementById("enemyIcon").className = "fa-regular fa-hand-scissors"; 
             break;
-        default: document.getElementById("enemyIcon").className = "fa-solid fa-question"; ;
+        default: document.getElementById("enemyIcon").className = "fa-solid fa-question";
     }
 
     if(myWeapon == enemyWeapon){
@@ -45,7 +45,7 @@ function compareWeapons(myWeapon, enemyWeapon){
         lose();
     }
 
-    else if (myWeapon == "SCISSOR" && enemyWeapon == "ROCK"){
+    else  /*(myWeapon == "SCISSOR" && enemyWeapon == "ROCK")*/{
         lose();
     }
 }
